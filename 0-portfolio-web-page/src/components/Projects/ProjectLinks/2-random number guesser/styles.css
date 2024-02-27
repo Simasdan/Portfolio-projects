@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./background.png) center/cover no-repeat, #2d1c5a;
+    background-blend-mode: overlay, normal;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .left-side {
+    width: calc((100% / 2));
+    height: 100vh;
+}
+
+.container .left-side svg{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+/* Guess higher */
+
+.container .guessLower .img-sad img,
+.container .guessHigher .img-sad img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .guessHigher {
+    display: flex;
+    width: 100%;
+    padding: 34px 32px 34px 32px;
+    align-items: center;
+    gap: 20px;
+    background: rgba(170, 2, 2, 0.33);
+    display: none;
+    padding-right: 30px;
+}
+
+.container .guessHigher h2 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container .guessHigher .guess-text-lower {
+    display: flex;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container .guessHigher .guess-text-lower span {
+    padding: 1px 8px;
+    align-items: flex-start;
+    gap: 8px;
+    background: #D31E3E;
+}
+
+/* Guess lower */
+
+.container .guessLower {
+    display: flex;
+    width: 100%;
+    padding: 34px 32px 34px 32px;
+    align-items: center;
+    gap: 20px;
+    background: rgba(170, 2, 2, 0.33);
+    opacity: 1;
+    transition: opacity 0.2s;
+    display: none;
+    padding-right: 30px;
+}
+
+.container .guessLower h2 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container .guessLower .guess-text-lower {
+    display: flex;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container .guessLower .guess-text-lower span {
+    padding: 1px 8px;
+    align-items: flex-start;
+    gap: 8px;
+    background: #D31E3E;
+}
+
+.container .guessHigher .guess-text,
+.container .guessLower .guess-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Form */
+
+.container .right-side{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: calc((100% / 2));
+    padding-right: 30px;
+}
+
+.container .right-side h1{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+}
+
+.container .right-side .form #guessField{
+    display: flex;
+    width: 375px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    height: 56px;
+    padding: 14px 16px;
+    border: none;
+    background: rgba(23, 14, 49, 0.72);
+
+    color: #D4D4D4;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+
+    margin-bottom: 8px;
+}
+
+.container .right-side .form label {
+    color: #DEDEDE;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+.container .right-side .form #submitGuess{
+    display: flex;
+    width: 256px;
+    padding: 16px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    color: #C2C2C2;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px; /* 116.667% */
+    margin-top: 24px;
+
+    cursor: pointer;
+}
+
+/* Correct answer */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2d1c5a;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    height: 768px;
+    border: 4px solid #FFF;
+    border-radius: 50px;
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+.answer-wrapper {
+    width: auto;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 126px 130px 126px 130px;
+}
+
+.answer-wrapper .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.answer-wrapper h1 {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-wrap: nowrap;
+}
+
+.answer-wrapper .answer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.answer-wrapper .answer-text p {
+    text-wrap: nowrap;
+}
+
+.answer-wrapper .answer-text span {
+    display: flex;
+    padding: 0px 4px;
+    align-items: flex-start;
+    gap: 8px;
+    background: #9747FF;
+    text-wrap: nowrap;
+}
+
+.answer-wrapper #resetGame {
+    display: flex;
+    width: 256px;
+    padding: 16px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #FFF;
+
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px; /* 116.667% */
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+#resetGame:hover {
+    background: #9747FF;
+    color: #FFF;
+}
+
+@media only screen and (max-width: 1400px) {
+    .container .right-side h1 {
+        font-size: 70px;
+    }
+
+    .container .guessLower h2,
+    .container .guessHigher h2 {
+        font-size: 40px;
+    }
+
+    .container .guessLower .guess-text-lower,
+    .container .guessHigher .guess-text-lower {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .container .right-side h1 {
+        font-size: 55px;
+    }
+
+    .container .guessHigher,
+    .container .guessLower {
+        padding: 10px 16px 10px 16px;
+    }
+
+    .container .guessLower .img-sad,
+    .container .guessHigher .img-sad {
+        width: 105px;
+        height: 105px;
+    }
+
+    .container .guessLower h2,
+    .container .guessHigher h2 {
+        font-size: 28px;
+    }
+
+    .container .guessLower .guess-text-lower,
+    .container .guessHigher .guess-text-lower {
+        font-size: 18px;
+    }
+
+    .answer-wrapper {
+        padding: 50px 100px;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .container .right-side h1 {
+        font-size: 40px;
+    }
+
+    .container .right-side .form #guessField {
+        width: 100%;
+        padding-right: 30px;
+    }
+
+    .container .guessHigher,
+    .container .guessLower {
+        padding: 10px 16px 10px 16px;
+    }
+
+    .container .guessLower .img-sad,
+    .container .guessHigher .img-sad {
+        width: 85px;
+        height: 85px;
+    }
+
+    .container .guessLower h2,
+    .container .guessHigher h2 {
+        font-size: 20px;
+    }
+
+    .container .guessLower .guess-text-lower,
+    .container .guessHigher .guess-text-lower {
+        font-size: 14px;
+    }
+
+    .modal {
+        height: 600px;
+    }
+
+    .modal .answer-wrapper h1 {
+        font-size: 60px;
+    }
+
+    .modal .answer-wrapper .answer-text {
+        font-size: 22px;
+    }
+
+    .modal .answer-wrapper #resetGame {
+        width: 200px;
+        line-height: 20px;
+        padding: 12px 6px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .right-side h1 {
+        font-size: 30px;
+    }
+
+    .container .right-side .form #guessField {
+        width: 100%;
+        padding-right: 30px;
+    }
+
+    .container .guessHigher,
+    .container .guessLower {
+        padding: 5px 10px;
+    }
+
+    .modal {
+        height: 500px;
+    }
+
+    .modal .answer-wrapper {
+        gap: 16px;
+        padding: 30px 60px;
+    }
+
+    .modal .answer-wrapper h1 {
+        font-size: 48px;
+    }
+
+    .modal .answer-wrapper .answer-text {
+        font-size: 18px;
+    }
+
+    .modal .answer-wrapper #resetGame {
+        width: 180px;
+        line-height: 16px;
+        padding: 10px 5px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .container .right-side h1 {
+        font-size: 25px;
+    }
+
+    .container .right-side .form #guessField {
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .container .right-side .form label {
+        font-size: 12px;
+    }
+
+    .container .right-side .form #submitGuess {
+        padding-right: 30px;
+        width: 150px;
+        font-size: 15px;
+        padding: 10px 8px;
+        margin-top: 16px;
+    }
+
+    .container .guessHigher,
+    .container .guessLower {
+        padding: 10px 10px;
+    }
+
+    .container .guessLower h2,
+    .container .guessHigher h2 {
+        font-size: 14px;
+    }
+
+    .container .guessLower .guess-text-lower,
+    .container .guessHigher .guess-text-lower {
+        font-size: 11px;
+    }
+
+    .modal {
+        height: 400px;
+    }
+
+    .modal .answer-wrapper {
+        gap: 16px;
+        padding: 10px 10px;
+    }
+
+    .modal .answer-wrapper .img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .modal .answer-wrapper h1 {
+        font-size: 36px;
+    }
+
+    .modal .answer-wrapper .answer-text {
+        font-size: 16px;
+    }
+
+    .modal .answer-wrapper #resetGame {
+        width: 160px;
+        line-height: 14px;
+        padding: 10px 5px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container .right-side h1 {
+        font-size: 18px;
+    }
+
+    .container .right-side .form #guessField {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .container .right-side .form label {
+        font-size: 10px;
+    }
+
+    .container .right-side .form #submitGuess {
+        width: 100px;
+        font-size: 12px;
+        padding: 6px 8px;
+        margin-top: 16px;
+    }
+}

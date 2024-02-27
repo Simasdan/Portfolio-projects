@@ -1,0 +1,27 @@
+.second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.second-section p {
+    font-size: 20px;
+}
+
+.second-section .second-section-tech-stack-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+
+
+
+
+

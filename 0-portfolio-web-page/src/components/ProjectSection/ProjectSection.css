@@ -1,0 +1,15 @@
+.project-section {
+    padding: 0px 20px;
+    height: 100vh;
+}
+
+.project-section .project-section-title,
+.project-section .project-section-subtitle 
+    {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.project-section .project-section-subtitle {
+    font-size: 20px;
+}

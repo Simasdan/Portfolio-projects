@@ -1,0 +1,72 @@
+.nauja-preke {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.nauja-preke form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nauja-preke form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.prekes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #F4F3EA;
+}
+
+.prekes .preke {
+    width: calc((100% - 2 * 20px) / 3);
+    background: #333D51;
+    color: #D3AC2B;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    border-radius: 18px;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.prekes .preke span {
+    font-weight: bold;
+}
+
+.prekes .preke .trynimas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prekes .preke .trynimas .trinti-mygtukas {
+    width: 80px;
+}
+
+.prekes .preke .trynimas .ar-tikrai-trinti .taip-mygtukas{
+    margin-right: 5px;
+}
+
+.prekes .preke .trynimas .ar-tikrai-trinti p {
+    margin-bottom: 5px;
+}
+
+.filtrai-rikiavimas {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}

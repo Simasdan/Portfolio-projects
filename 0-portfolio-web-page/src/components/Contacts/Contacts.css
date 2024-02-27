@@ -1,0 +1,18 @@
+.contacts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.contacts-wrapper .contacts-wrapper-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacts-wrapper .contacts-wrapper-text-svg-group {
+    display: flex;
+    gap: 5px;
+}

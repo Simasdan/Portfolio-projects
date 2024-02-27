@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #86b9b0, #4c7273, #042630, #041421);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100%;
+}
+  
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.container-fluid {
+    font-family: "Fredoka", sans-serif;
+    width: 100%;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 46px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 26px;
+}
+
+p {
+    color: #fff;
+}
+
+.break {
+    border-bottom: 2px solid #fff;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.h1-flow {
+    background-image: linear-gradient(-225deg,
+            rgba(34, 193, 195, 1) 0%,
+            rgb(107,191,145) 29%,
+            rgb(180,189,95) 67%,
+            rgba(253, 187, 45, 1) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2.5s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
