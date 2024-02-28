@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import FirstProject from '../Projects/FirstProject';
 import SecondProject from '../Projects/SecondProject';
 import ThirdProject from '../Projects/ThirdProject';
+import FourthProject from '../Projects/FourthProject';
 
 const CarouselWrapper = () => {
 
@@ -15,11 +16,11 @@ const CarouselWrapper = () => {
         },
         desktop: {
             breakpoint: { max: 1040, min: 768 },
-            items: 3
+            items: 2
         },
         tablet: {
             breakpoint: { max: 768, min: 375 },
-            items: 2
+            items: 1
         },
         mobile: {
             breakpoint: { max: 375, min: 0 },
@@ -33,8 +34,7 @@ const CarouselWrapper = () => {
                 <SecondProject />
                 <FirstProject />
                 <ThirdProject />
-                <FirstProject />
-                <FirstProject />
+                <FourthProject />
             </Carousel>
         </div>
     )

@@ -3,11 +3,11 @@ import './ProjectCard.css'
 const FirstProject = () => {
     return (
         <div className="project-card">
-            <div className='project-card-image third'></div>
+            <div className='project-card-image fourth'></div>
             <div className="project-card-text">
                 <div className='project-card-text-text'>
-                    <h4>React Online Shop</h4>
-                    <p>This project is a succinct demonstration of an online shopping platform, developed utilizing React and minimal CSS styling. Its primary objective is to highlight various functionalities including an interactive "Create New Item" button that prompts input fields for item addition, a filter input field enabling users to narrow down displayed items based on specified criteria, a sorting feature allowing the arrangement of items according to user preferences, and a delete button for item removal. Prior to deletion, a confirmation dialog seeks user validation for the action.</p>
+                    <h4>React Portfolio Page</h4>
+                    <p>This is a React portfolio website project that You are currently in. This website serves as a showcase of my skills and projects.</p>
                 </div>
                 <div className='project-card-text-links'>
                     <p><span className='techStack'>Tech Stack:</span> React and CSS</p>

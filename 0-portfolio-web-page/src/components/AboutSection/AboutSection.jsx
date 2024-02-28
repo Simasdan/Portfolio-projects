@@ -9,9 +9,6 @@ const AboutSection = () => {
         <h1 className='h1-flow'>Simonas Danielius</h1>
         <h1>Welcome to my portfolio</h1>
       </div>
-      <div className='gradient-wrapper'>
-        <div className='about-section-img-wrapper'></div>
-      </div>
     </div>
   )
 }
