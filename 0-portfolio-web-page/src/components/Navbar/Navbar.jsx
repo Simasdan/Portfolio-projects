@@ -1,29 +1,33 @@
-import React, { useState } from 'react'
-import { FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import './Navbar.css';
 
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Navbar = (props) => {
+    
+    let refsFromParent = props.allRefs;
 
     const toggleMeniu = () => {
-        setIsOpen((open) => !open)
+        props.setIsOpen((open) => !open)
     }
 
+    const navLinkHandler = (ref) => {
+        props.infoToParent(ref)
+        props.setIsOpen(false)
+    }
+    
     return (
-        <div className={`navigation-bar ${isOpen ? 'open' : ''}`}>
-            <button className='h1 h1-flow'><h1>Simdan</h1></button>
-            <button className='navbar-burger' onClick={toggleMeniu}>
-                <FaBars />
-            </button>
-            <ul className={`navigation-bar-content ${isOpen ? 'is-open' : ''}`}>
-                <button><li>Home</li></button>
-                <button><li>About</li></button>
-                <button><li>Tech Stack</li></button>
-                <button><li>Projects</li></button>
-                <button><li>Contact</li></button>
-            </ul>
-            
-        </div>
+        <nav className={`navigation-bar ${props.isOpen ? 'open' : ''}`}>
+          <button className='h1 h1-flow'><h1>Simdan</h1></button>
+          <button className='navbar-burger' onClick={toggleMeniu}>
+            <FaBars />
+          </button>
+          <ul className={`navigation-bar-content ${props.isOpen ? 'is-open' : ''}`}>
+            <li><button onClick={() => navLinkHandler(refsFromParent.aboutSectionRef)}>Home</button></li>
+            <li><button onClick={() => navLinkHandler(refsFromParent.introSectionRef)}>About</button></li>
+            <li><button onClick={() => navLinkHandler(refsFromParent.secondSectionRef)}>Tech Stack</button></li>
+            <li><button onClick={() => navLinkHandler(refsFromParent.projectSectionRef)}>Projects</button></li>
+            <li><button onClick={() => navLinkHandler(refsFromParent.contactSectionRef)}>Contact</button></li>
+          </ul>
+        </nav>
     )
 }
 

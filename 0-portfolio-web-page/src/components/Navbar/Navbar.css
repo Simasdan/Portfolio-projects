@@ -23,6 +23,7 @@
     flex-direction: row;
     gap: 30px;
     margin-right: 10px;
+    list-style-type: none;
 }
 
 .navigation-bar .navigation-bar-content button {
