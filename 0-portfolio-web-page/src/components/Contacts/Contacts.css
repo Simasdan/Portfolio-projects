@@ -17,3 +17,28 @@
     display: flex;
     gap: 5px;
 }
+
+@media only screen and (max-width: 700px) {
+    .contacts-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+    }
+
+    .contacts-wrapper .contacts-wrapper-text {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .contacts-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .contacts-wrapper .contacts-wrapper-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
