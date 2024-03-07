@@ -45,12 +45,14 @@
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
+    flex: 1;
 }
 
 .project-card .project-card-text .project-card-text-text {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    flex: 1;
 }
 
 .project-card .project-card-text .project-card-text-text h4 {
