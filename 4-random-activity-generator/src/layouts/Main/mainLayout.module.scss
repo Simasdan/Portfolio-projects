@@ -1,0 +1,20 @@
+@import '../../styles/tools';
+
+.container {
+    margin: 0 auto;
+    max-width: 88rem;
+    padding: $space-XXXL 0 0 0;
+    text-align: center;
+
+  .mainWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $space-L;
+
+    .activityParams {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

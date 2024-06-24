@@ -1,0 +1,60 @@
+@import '../../styles/tools';
+
+@import '../../styles/tools';
+
+$checkbox_icon: url('../../assets/icons/icon_check.svg');
+
+
+.checkboxWrapper {
+  @include flexbox-centered;
+
+  max-width: 19.2rem;
+  width: 100%;
+
+  label {
+    @include flexbox-centered;
+
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  span {
+    @include label-L;
+
+    cursor: pointer;
+    text-wrap: nowrap;
+    color: $color-primary;
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: $border-radius-xsmall;
+    margin-right: $space-XXXXS;
+    border: 0.2rem solid $color-primary;
+    cursor: pointer;
+
+    &:checked {
+      background-color: $color-primary;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: $checkbox_icon;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 1.5rem;
+        color: transparent;
+        position: absolute;
+        left: 0.15rem;
+        top: 0.3rem;
+        width: 1.396rem;
+        height: 1.048rem;
+      }
+    }
+  }
+}

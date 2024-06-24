@@ -1,0 +1,26 @@
+@import '../../styles/tools';
+
+.footer {
+    padding: $space-L 0 $space-S 0;
+    display: flex;
+}
+
+p {
+    @include body-S;
+    color: $color-grey-500;
+}
+
+.footerLeft {
+    text-align: left;
+    width: 33.33%;
+}
+
+.footerRight {
+    text-align: right;
+    width: 33.33%;
+}
+
+.footerMiddle {
+    width: 33.33%;
+    text-align: center;
+}

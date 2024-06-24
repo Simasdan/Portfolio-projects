@@ -1,0 +1,101 @@
+@import '../../styles/tools';
+
+.activityCardWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1rem solid $color-grey-100;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius-large;
+    padding: $space-XXXXXS;
+    width: 100%;
+    height: 34rem;
+
+
+    .activityCard {
+        padding: $space-XXS $space-XXS 0 $space-XXS;
+        display: flex;
+        gap: $space-XXS;
+        flex-direction: column;
+        max-width: 53.8rem;
+        width: 100%;
+        align-items: center;
+        height: 100%;
+
+        .title {
+            width: 100%;
+            height: 12rem;
+
+            .activityCardTitle {
+                @include headline-L;
+
+                color: rgba(81, 127, 139, 1);
+                width: 100%;
+                height: 100%;
+                text-align: left;
+                text-wrap: wrap;
+            }
+        }
+
+        .activityCardContent {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: flex-end;
+
+            .activityCardContentTabs {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-evenly;
+                margin-bottom: $space-XXS;
+
+                .tab {
+                    width: 12rem;
+                    padding: $space-XXXXS $space-XXXXXS $space-XXXXS $space-XXXXXS;
+                    border-radius: $border-radius-small;
+                    border: 0.1rem solid rgba(203, 217, 221, 1);
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: $space-XXXXXS;
+
+                    h3 {
+                        @include label-S;
+
+                        text-align: center;
+                        color: $color-grey-400;
+                    }
+
+                    p {
+                        @include body-M;
+
+                        text-align: center;
+                        color: rgba(81, 127, 139, 1);
+                    }
+                }
+            }
+
+            .moreInformation {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .activityCardImg {
+        height: 100%;
+
+        img {
+            width: 33.4rem;
+            height: 100%;
+            border-radius: $border-radius-regular;
+        }
+    }
+}

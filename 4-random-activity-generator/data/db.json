@@ -1,0 +1,211 @@
+{
+  "activities": [
+    {
+      "activity": "Bake a pie with some friends",
+      "type": "cooking",
+      "participants": 3,
+      "price": 0.3,
+      "link": "",
+      "key": "3141592",
+      "accessibility": 0.3
+    },
+    {
+      "activity": "Listen to music you haven't heard in a while",
+      "type": "music",
+      "participants": 1,
+      "price": 0.05,
+      "link": "",
+      "key": "4296813",
+      "accessibility": 0.9
+    },
+    {
+      "activity": "Hold a yard sale",
+      "type": "social",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "1432113",
+      "accessibility": 0.1
+    },
+    {
+      "activity": "Create a meal plan for the coming week",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "3491470",
+      "accessibility": 0
+    },
+    {
+      "activity": "Start a family tree",
+      "type": "social",
+      "participants": 1,
+      "price": 0,
+      "link": "https://en.wikipedia.org/wiki/Family_tree",
+      "key": "6825484",
+      "accessibility": 1
+    },
+    {
+      "activity": "Learn GraphQL",
+      "type": "education",
+      "participants": 1,
+      "price": 0,
+      "link": "https://graphql.org/",
+      "key": "2167064",
+      "accessibility": 0.8
+    },
+    {
+      "activity": "Watch the sunset or the sunrise",
+      "type": "recreational",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "4748214",
+      "accessibility": 1
+    },
+    {
+      "activity": "Memorize the fifty states and their capitals",
+      "type": "education",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "4179309",
+      "accessibility": 0
+    },
+    {
+      "activity": "Go see a movie in theaters with a few friends",
+      "type": "social",
+      "participants": 4,
+      "price": 0.2,
+      "link": "",
+      "key": "5262759",
+      "accessibility": 0.3
+    },
+    {
+      "activity": "Fix something that's broken in your house",
+      "type": "diy",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "6925988",
+      "accessibility": 0.3
+    },
+    {
+      "activity": "Volunteer at a local animal shelter",
+      "type": "charity",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "1382389",
+      "accessibility": 0.5
+    },
+    {
+      "activity": "Cook something together with someone",
+      "type": "cooking",
+      "participants": 2,
+      "price": 0.3,
+      "link": "",
+      "key": "1799120",
+      "accessibility": 0.8
+    },
+    {
+      "activity": "Take a nap",
+      "type": "relaxation",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "6184514",
+      "accessibility": 0
+    },
+    {
+      "activity": "Learn the Chinese erhu",
+      "type": "music",
+      "participants": 1,
+      "price": 0.6,
+      "link": "",
+      "key": "2742452",
+      "accessibility": 0.4
+    },
+    {
+      "activity": "Configure two-factor authentication on your accounts",
+      "type": "busywork",
+      "participants": 1,
+      "price": 0,
+      "link": "https://en.wikipedia.org/wiki/Multi-factor_authentication",
+      "key": "1572120",
+      "accessibility": 0
+    },
+    {
+      "activity": "Learn calligraphy",
+      "type": "education",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "4565537",
+      "accessibility": 0.1
+    },
+    {
+      "activity": "Learn and play a new card game",
+      "type": "recreational",
+      "participants": 1,
+      "price": 0,
+      "link": "https://www.pagat.com",
+      "key": "9660022",
+      "accessibility": 0
+    },
+    {
+      "activity": "Make a scrapbook with pictures of your favorite memories",
+      "type": "diy",
+      "participants": 1,
+      "price": 0.1,
+      "link": "",
+      "key": "5554174",
+      "accessibility": 0.1
+    },
+    {
+      "activity": "Contribute code or a monetary donation to an open-source software project",
+      "type": "charity",
+      "participants": 1,
+      "price": 0.1,
+      "link": "https://github.com/explore",
+      "key": "7687030",
+      "accessibility": 0
+    },
+    {
+      "activity": "Make homemade ice cream",
+      "type": "cooking",
+      "participants": 1,
+      "price": 0.2,
+      "link": "",
+      "key": "3818400",
+      "accessibility": 0.2
+    },
+    {
+      "activity": "Draw and color a Mandala",
+      "type": "relaxation",
+      "participants": 1,
+      "price": 0.05,
+      "link": "https://en.wikipedia.org/wiki/Mandala",
+      "key": "4614092",
+      "accessibility": 0.1
+    },
+    {
+      "activity": "Write a song",
+      "type": "music",
+      "participants": 1,
+      "price": 0,
+      "link": "",
+      "key": "5188388",
+      "accessibility": 0
+    },
+    {
+      "activity": "Wash your car",
+      "type": "busywork",
+      "participants": 1,
+      "price": 0.05,
+      "link": "",
+      "key": "1017771",
+      "accessibility": 0.15
+    }
+  ]
+}

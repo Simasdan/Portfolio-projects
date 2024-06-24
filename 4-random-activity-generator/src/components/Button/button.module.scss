@@ -1,0 +1,44 @@
+@import '../../styles/tools';
+
+.generateButton {
+    text-decoration: none;
+    height: 4rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-XXXXS;
+    color: $color-white;
+    background-color: $color-primary;
+    border: $color-primary;
+    cursor: pointer;
+    padding: 1rem $space-S 1rem $space-XXS;
+
+    @include label-L;
+    
+    &:hover {
+        background-color: $color-grey-400;
+        border: $color-grey-400;
+    }
+}
+
+.moreinfoButton {
+    text-decoration: none;
+    height: 4rem;
+    border-radius: 10rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-XXXXS;
+    color: $color-grey-500;
+    background-color: $color-white;
+    cursor: pointer;
+    padding: 1rem $space-XXXS;
+
+    @include label-L;
+    
+    &:hover {
+        background-color: $color-grey-100;
+    }
+}
