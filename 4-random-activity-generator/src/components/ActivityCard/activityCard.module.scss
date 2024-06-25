@@ -30,7 +30,6 @@
             .activityCardTitle {
                 @include headline-L;
 
-                color: rgba(81, 127, 139, 1);
                 width: 100%;
                 height: 100%;
                 text-align: left;
@@ -51,13 +50,12 @@
                 width: 100%;
                 justify-content: space-evenly;
                 margin-bottom: $space-XXS;
+                gap: $space-XXXXS;
 
                 .tab {
                     width: 12rem;
                     padding: $space-XXXXS $space-XXXXXS $space-XXXXS $space-XXXXXS;
                     border-radius: $border-radius-small;
-                    border: 0.1rem solid rgba(203, 217, 221, 1);
-
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -75,7 +73,6 @@
                         @include body-M;
 
                         text-align: center;
-                        color: rgba(81, 127, 139, 1);
                     }
                 }
             }
@@ -87,13 +84,103 @@
                 justify-content: flex-end;
             }
         }
+
+        &.busywork {
+            .activityCardTitle, .tab p {
+                color: $color-busywork;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-busywork-light;
+            }
+        }
+
+        &.charity {
+            .activityCardTitle, .tab p {
+                color: $color-charity;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-charity-light;
+            }
+        }
+
+        &.cooking {
+            .activityCardTitle, .tab p {
+                color: $color-cooking;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-cooking-light;
+            }
+        }
+
+        &.diy {
+            .activityCardTitle, .tab p {
+                color: $color-diy;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-diy-light;
+            }
+        }
+
+        &.education {
+            .activityCardTitle, .tab p {
+                color: $color-education;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-education-light;
+            }
+        }
+    
+        &.music {
+            .activityCardTitle, .tab p {
+                color: $color-music;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-music-light;;
+            }
+        }
+
+        &.recreational {
+            .activityCardTitle, .tab p {
+                color: $color-recreational;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-recreational-light;
+            }
+        }
+
+        &.relaxation {
+            .activityCardTitle, .tab p {
+                color: $color-relaxation;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-relaxation-light;
+            }
+        }
+
+        &.social {
+            .activityCardTitle, .tab p {
+                color: $color-social;
+            }
+    
+            .tab {
+                border: 0.1rem solid $color-social-light;
+            }
+        }
     }
 
     .activityCardImg {
         height: 100%;
 
         img {
-            width: 33.4rem;
+            width: 100%;
             height: 100%;
             border-radius: $border-radius-regular;
         }

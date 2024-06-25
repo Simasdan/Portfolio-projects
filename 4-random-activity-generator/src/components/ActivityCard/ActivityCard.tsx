@@ -13,7 +13,7 @@ interface ActivityCardProps {
     link?: string;
 }
 
-const ActivityCard = ({ title, category, participants, price, img, link }: ActivityCardProps) => {
+const ActivityCard = ({ title, category, participants, price, img, link, accessibility }: ActivityCardProps) => {
 
     const fetchActivity = async () => {
         const response = await fetch('http://localhost:3002/activities');
@@ -30,7 +30,7 @@ const ActivityCard = ({ title, category, participants, price, img, link }: Activ
 
     return (
         <div className={styles.activityCardWrapper}>
-            <div className={styles.activityCard}>
+            <div className={`${styles.activityCard} ${styles[category]}`}>
                 <div className={styles.title}>
                     <h1 className={styles.activityCardTitle}>
                         {title}
@@ -51,7 +51,7 @@ const ActivityCard = ({ title, category, participants, price, img, link }: Activ
                             <p>{price}</p>
                         </div>
                         <div className={styles.tab}>
-                            <p>Very Accessible</p>
+                            <p>{accessibility}</p>
                         </div>
                     </div>
                     {link && (
