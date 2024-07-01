@@ -21,6 +21,10 @@ body {
 .container .left-side {
     width: calc((100% / 2));
     height: 100vh;
+    background-image: url(numbers.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 
 .container .left-side svg{
