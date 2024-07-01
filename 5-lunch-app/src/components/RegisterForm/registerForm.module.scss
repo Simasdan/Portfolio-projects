@@ -1,0 +1,69 @@
+@import '../../styles/tools';
+
+.registerFormWrapper {
+  width: 100%;
+  position: relative;
+
+  .registerFormHeader {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: $space-XXXXS;
+
+    .title {
+      @include headline-L;
+
+      color: $color-primary-600;
+    }
+
+    .subtitle {
+      @include body-L;
+
+      color: $color-grey-500;
+    }
+  }
+
+  .registerFormBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .registerForm {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .formInputWrap .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $space-S;
+        margin-top: $space-M;
+        margin-bottom: $space-S;
+      }
+
+      .communityRulesContainer {
+        display: flex;
+        margin-bottom: $space-XXXXL;
+      }
+
+      .communityRulesBtn {
+        @include body-L;
+
+        color: $color-secondary-600;
+        text-decoration: underline;
+        background-color: $color-white;
+        border: none;
+        margin-left: $space-XXXXS;
+      }
+    }
+
+    .registerForm button[type='submit'] {
+      width: 100%;
+
+      @include flexbox-centered;
+    }
+  }
+}

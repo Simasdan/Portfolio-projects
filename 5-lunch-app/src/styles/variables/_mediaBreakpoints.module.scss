@@ -1,0 +1,21 @@
+$max-phoneS-width: 490;
+$max-phone-width: 599;
+$max-tablet-portraitM-width: 720;
+$min-tablet-portrait-width: 600;
+$min-tablet-landscape-width: 900;
+$min-tablet-desktop-width: 1050;
+$min-desktop-width: 1200;
+$min-med-desktop-width: 1320;
+$min-big-desktop-width: 1800;
+
+:export {
+  max_phoneS_width: $max-phoneS-width;
+  max_phone_width: $max-phone-width;
+  min_tablet_portrait_width: $min-tablet-portrait-width;
+  max_tablet_portraitM_width: $max-tablet-portraitM-width;
+  min_tablet_landscape_width: $min-tablet-landscape-width;
+  min_tablet_desktop_width: $min-tablet-desktop-width;
+  min_desktop_width: $min-desktop-width;
+  min_med_desktop_width: $min-med-desktop-width;
+  min_big_desktop_width: $min-big-desktop-width;
+}

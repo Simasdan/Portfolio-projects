@@ -1,0 +1,60 @@
+@import '../../styles/_tools.scss';
+.modalOverlay {
+    position: fixed;
+    top: 6.3rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 6.3rem);
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    background: $color-white;
+    padding: $space-M;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-in-out;
+    padding-top: $space-XL;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    max-width: 34.7rem;
+    height: calc(100vh - 6.3rem);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(6rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.closeButtonWrapper {
+    position: absolute;
+    top: $space-XXXXS;
+    right: $space-XXXXS;
+}
+
+.userProfile,
+.orderSummary {
+    margin-bottom: $space-XS;
+}

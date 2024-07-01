@@ -1,0 +1,41 @@
+/* Imports for global variables and styles */
+@import './_tools.scss';
+
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+html {
+  font-size: 10px;
+}
+
+/* stylelint-enable scale-unlimited/declaration-strict-value */
+
+* {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.centered-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  @include webkit-scrollbar-track;
+}
+::-webkit-scrollbar-thumb {
+  @include webkit-scrollbar-thumb;
+
+  border: 0.1rem solid $color-grey-300;
+}

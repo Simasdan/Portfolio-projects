@@ -1,0 +1,74 @@
+@import '../../styles/tools';
+
+.loginFormWrapper {
+  width: 100%;
+  position: relative;
+
+  .loginFormHeader {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: $space-XXXXS;
+
+    .title {
+      @include headline-L;
+
+      color: $color-primary-600;
+    }
+
+    .subtitle {
+      @include body-L;
+
+      color: $color-grey-500;
+    }
+  }
+
+  .loginFormBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .loginForm {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .formInputWrap .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $space-S;
+        margin-top: $space-M;
+        margin-bottom: $space-XXXS;
+      }
+
+      .formInputWrap .forgotPassword {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .forgotPasswordBtn {
+        @include body-M;
+
+        color: $color-secondary-600;
+        text-decoration: underline;
+        background-color: $color-white;
+        border: none;
+        margin-bottom: $space-XXXXL;
+      }
+    }
+
+    .loginForm button[type='submit'] {
+      width: 100%;
+
+      @include flexbox-centered;
+    }
+  }
+}
+
+.resetPasswordInput {
+  margin: $space-XXS 0 $space-S;
+}

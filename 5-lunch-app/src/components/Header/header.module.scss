@@ -1,0 +1,27 @@
+@import '../../styles/tools';
+
+.headerTitle {
+  @include headline-L;
+
+  color: $color-primary-600;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 $space-XXXXXS 0;
+}
+
+.headerSubtitle {
+  @include title-L;
+
+  color: $color-primary-600;
+  text-align: left;
+  padding: 0;
+  margin: $space-XXXXXS 0 0 0;
+}
+
+.headerBody {
+  display: inline-block;
+  margin: $space-S 0 $space-M;
+  @include for-tablet-landscape-up {
+    margin: 4.4rem 0 $space-XXL;
+  }
+}

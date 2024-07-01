@@ -1,0 +1,85 @@
+@import '../../styles/tools';
+
+.filtersLayout {
+    margin-top: 3.25rem;
+    width: 100%;
+    padding: $space-XS;
+
+    border: 0.05rem solid $color-grey-100;
+    border-radius: $border-radius-regular;
+    box-shadow: $box-shadow-filters;
+    background-color: $color-white;
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-XXXS;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @include for-med-desktop-up {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .filtersWrapper {
+            display: flex;
+            gap: $space-XXXS;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            @include for-med-desktop-up {
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 65.8rem;
+            }
+
+            input {
+                width: 100%;
+                height: 4rem;
+                text-align: left;
+
+                @include for-med-desktop-up {
+                    width: 32.3rem;
+                }
+            }
+
+            label {
+                @include label-XS;
+
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                color: $color-primary-600;
+            }
+        }
+
+        .filterButtonWrapper {
+            display: flex;
+            gap: $space-XXXS;
+        }
+    }
+
+    .seperator {
+        width: 100%;
+        border: 0.1rem solid $color-grey-200;
+        margin: 2.5rem 0;
+    }
+
+    .sort {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2.2rem;
+
+        .title {
+            @include title-S;
+
+            color: $color-primary-600;
+            width: 5rem;
+        }
+    }
+}

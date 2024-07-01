@@ -1,0 +1,140 @@
+@import '/src/styles/_tools';
+
+// border radius for animation
+$border-radius-S: 4.2rem;
+$border-radius-L: 16rem;
+$border-radius-hor-S: 60%;
+$border-radius-hor-L: 95%;
+$border-radius-vert: 100%;
+
+.btn {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  border: 0.2rem solid $color-green-400;
+  border-radius: $border-radius-S;
+  color: $color-primary-600;
+  width: 24.3rem;
+  height: 4.8rem;
+
+  @include flexbox-centered;
+  @include label-S;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+  }
+
+  &:focus {
+    outline: 0.2rem solid $color-purple-500;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &.confirmed {
+    color: $color-white;
+    background-color: $color-green-400;
+
+    .icon {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin-left: 0.5rem;
+
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  .content {
+    z-index: 2;
+    @include flexbox-centered;
+  }
+
+  @keyframes fillNormal {
+    0% {
+      border-radius: $border-radius-hor-S $border-radius-vert;
+      left: 0;
+      width: 0rem;
+    }
+    100% {
+      border-radius: $border-radius-hor-L $border-radius-vert;
+      left: -100%;
+      width: 200%;
+    }
+  }
+
+  @keyframes fillTransp {
+    0% {
+      opacity: 0;
+      $border-radius: $border-radius-S;
+      width: 0;
+    }
+    100% {
+      opacity: 0.9;
+      border-radius: $border-radius-L;
+      width: 100%;
+    }
+  }
+
+  @keyframes removeFillNormal {
+    0% {
+      border-radius: $border-radius-hor-L $border-radius-vert;
+      left: -100%;
+      width: 200%;
+    }
+    100% {
+      border-radius: $border-radius-hor-S $border-radius-vert;
+      left: 0;
+      width: 0rem;
+    }
+  }
+
+  @keyframes removeFillTransp {
+    0% {
+      opacity: 0.9;
+      border-radius: $border-radius-L;
+      width: 100%;
+    }
+    100% {
+      opacity: 0;
+      border-radius: $border-radius-S;
+      width: 0;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    animation-duration: 1.5s;
+    position: absolute;
+    left: 0;
+    height: 4.6rem;
+    width: 0rem;
+    background-color: $color-green-400;
+    z-index: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &.pressed {
+    &::before {
+      animation-name: fillTransp;
+    }
+
+    &::after {
+      animation-name: fillNormal;
+    }
+  }
+
+  &.released {
+    &::before {
+      animation-name: removeFillNormal;
+    }
+
+    &::after {
+      animation-name: removeFillTransp;
+    }
+  }
+}

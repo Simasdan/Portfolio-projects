@@ -1,0 +1,88 @@
+@import '../../styles/tools';
+
+.userProfile {
+  width: 28.3rem;
+  height: auto;
+  padding: 1.6rem;
+  gap: $space-XXS;
+  background-color: $color-white;
+  border: $color-grey-100 0.05rem;
+  box-shadow: $box-shadow-m;
+  border-bottom-left-radius: $border-radius-regular;
+  border-top-left-radius: $border-radius-regular;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .profileSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $space-XXXS;
+    @include title-S;
+
+    button {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
+
+    img {
+      height: 3.2rem;
+      width: 3.2rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .account {
+      height: 3.8rem;
+      width: 3.8rem;
+      path {
+        fill: $color-grey-300;
+      }
+    }
+  }
+
+  .balanceSection {
+    height: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    @include title-M;
+
+    .balance {
+      width: 15.4rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .line {
+      width: 3.2rem;
+      height: 0.1rem;
+      transform: rotate(-90deg);
+      background-color: $color-grey-100;
+    }
+
+    .cartOrders {
+      position: relative;
+
+      .circle {
+        position: absolute;
+        top: 2.2rem;
+        left: 2.2rem;
+        background-color: $color-red-500;
+        @include label-XS;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        border: 0.15rem solid $color-white;
+        border-radius: 50%;
+        text-align: center;
+        color: $color-white;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import '../variables/mediaBreakpoints.module';
+
+@mixin for-phoneS-only {
+  @media (max-width: #{$max-phoneS-width}px) {
+    @content;
+  }
+}
+@mixin for-phone-only {
+  @media (max-width: #{$max-phone-width}px) {
+    @content;
+  }
+}
+@mixin for-tablet-portraitM-up {
+  @media (max-width: #{$max-tablet-portraitM-width}px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: #{$min-tablet-portrait-width}px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: #{$min-tablet-landscape-width}px) {
+    @content;
+  }
+}
+@mixin for-tablet-desktop-up {
+  @media (min-width: #{$min-tablet-desktop-width}px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: #{$min-desktop-width}px) {
+    @content;
+  }
+}
+@mixin for-med-desktop-up {
+  @media (min-width: #{$min-med-desktop-width}px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: #{$min-big-desktop-width}px) {
+    @content;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../styles/tools';
+
+.container {
+  img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 1.1rem;
+    scale: crop;
+    object-fit: cover;
+  }
+
+  .title {
+    gap: $space-XXXS;
+    display: flex;
+    align-items: center;
+  }
+
+  .name {
+    @include title-XS;
+
+    text-transform: uppercase;
+    color: $color-primary-600;
+  }
+
+  .comment {
+    @include body-S;
+
+    color: $color-grey-input-text;
+    padding-left: $space-M;
+  }
+
+  .account {
+    height: 2.2rem;
+    width: 2.2rem;
+    path {
+      fill: $color-grey-300;
+    }
+  }
+}

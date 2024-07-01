@@ -1,0 +1,114 @@
+// Use case:
+// @include headline-L;
+
+@mixin headline-L {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: 0;
+}
+
+@mixin headline-M {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+}
+
+@mixin headline-S {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  letter-spacing: 0;
+}
+
+@mixin title-XL {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+}
+
+@mixin title-L {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  letter-spacing: 0;
+}
+
+@mixin title-M {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+}
+
+@mixin title-S {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+}
+
+@mixin title-XS {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0;
+}
+
+@mixin label-L {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.025rem;
+}
+
+@mixin label-M {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.025rem;
+}
+
+@mixin label-S {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.025rem;
+}
+
+@mixin label-XS {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.025rem;
+}
+
+@mixin label-XXS {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
+}
+
+@mixin body-L {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+}
+
+@mixin body-M {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+}
+
+@mixin body-S {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}

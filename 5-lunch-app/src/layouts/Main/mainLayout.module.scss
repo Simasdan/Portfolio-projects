@@ -1,0 +1,122 @@
+@import '../../styles/_tools.scss';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color-grey-100;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  transition: $transition;
+  flex-grow: 1;
+  padding-top: 6.3rem;
+
+  &--collapsed {
+    padding-top: 6.3rem;
+  }
+
+  @include for-tablet-landscape-up {
+    display: flex;
+    padding-left: 25.4rem;
+    transition: $transition;
+    padding-top: 0;
+
+    &--collapsed {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      padding-left: 11.2rem;
+      transition: $transition;
+      padding-top: 0;
+    }
+
+    &--cartExpanded {
+      display: flex;
+      padding-right: 30rem;
+      transition: $transition;
+    }
+  }
+}
+
+.pageContent {
+  margin-right: $space-S;
+  margin-left: $space-S;
+
+  @include for-tablet-landscape-up {
+    margin-left: 0;
+  }
+}
+
+.footer {
+  margin-top: auto;
+
+  @include for-tablet-landscape-up {
+    padding-left: 21.4rem;
+    transition: $transition;
+
+    &--collapsed {
+      padding-left: 7.2rem;
+      transition: $transition;
+    }
+  }
+}
+.logo {
+  position: fixed;
+  left: 50%;
+  top: $space-M;
+  transform: translate(-50%, -50%);
+  width: 7.7rem;
+  height: 3.8rem;
+  z-index: 1002;
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.headerLine {
+  height: 6.3rem;
+  background-color: $color-primary-800;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  .account {
+    margin-left: auto;
+    height: 3.8rem;
+    width: auto;
+    margin-right: $space-XXS;
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.rightSide {
+  display: none;
+
+  @include for-tablet-landscape-up {
+    top: $space-S;
+    gap: $space-L;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.order {
+  overflow-x: hidden;
+  padding-bottom: $space-M;
+  padding-left: $space-XXXXS;
+}

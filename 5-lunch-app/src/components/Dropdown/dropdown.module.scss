@@ -1,0 +1,35 @@
+@import '../../styles/tools';
+
+.dropdownWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    .dropdownButton {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.8rem;
+        padding: 1rem $space-XXS;
+        width: 18.3rem;
+
+        background-color: $color-white;
+        border: 0.1rem solid $color-grey-200;
+        border-radius: $border-radius-small;
+        box-shadow: $box-shadow-logoutButton;
+        color: $color-primary-600;
+
+        @include title-S;
+
+        position: relative;
+        margin-top: 2.5rem;  
+        margin-left: 0rem;
+        @include for-tablet-landscape-up {
+            margin-left: -16.5rem;
+        }
+
+        &:hover {
+            background-color: $color-purple-200;
+        }
+    }
+}

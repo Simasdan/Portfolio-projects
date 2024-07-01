@@ -1,0 +1,118 @@
+@import '../../styles/tools';
+
+.reusableDropdownWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: $space-XXXXXS;
+    cursor: pointer;
+
+    @include for-med-desktop-up {
+        width: 32.3rem;
+    }
+
+    .reusableDropdownLabel {
+        color: $color-primary-600;
+
+        @include label-S;
+
+        line-height: 2.4rem;
+    }
+
+    .reusableDropdownButton {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 4rem;
+        padding: 0.7rem $space-XXXS;
+        border-radius: $border-radius-regular;
+        border: $color-grey-300 0.1rem solid;
+        outline: none;
+        color: $color-grey-input-text;
+        transition: 0.1s;
+        position: relative;
+        background-color: $color-white;
+
+        @include body-M;
+
+        @include for-med-desktop-up {
+            width: 32.3rem;
+        }
+
+        span {
+            @include body-M;
+        }
+
+        &:focus {
+            border: none;
+            outline: $color-purple-500 0.2rem solid;
+            color: $color-primary-600;
+            background-color: $color-white;
+        }
+
+        .dropdownIconRotate {
+            transform: rotate(180deg);
+        }
+    }
+
+    .dropdownSelected {
+        color: $color-primary-600;
+    }
+
+    .reusableDropdownMenu {
+        width: 100%;
+        position: absolute;
+        top: 7.4rem;
+        border: 0.1rem solid $color-grey-200;
+        box-shadow: $box-shadow-logoutButton;
+        border-radius: $border-radius-small;
+
+        .reusableDropdownList {
+            list-style-type: none;
+            width: 100%;
+            overflow-y: auto;
+            max-height: 12.3rem;
+
+            &::-webkit-scrollbar {
+                width: $space-XXXXS;
+            }
+
+            &::-webkit-scrollbar-track {
+                @include webkit-scrollbar-track;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @include webkit-scrollbar-thumb;
+            }
+
+            .reusableDropdownListItem {
+                width: 100%;
+                text-align: left;
+                color: $color-primary-600;
+                padding: 1rem $space-XXS;
+                cursor: pointer;
+                background-color: $color-white;
+
+
+                @include title-S;
+
+                &:hover {
+                    background-color: $color-purple-200;
+                }
+
+                &:focus { 
+                    background-color: $color-purple-100;
+                    color: $color-secondary-600;    
+                    z-index: 1000;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+}

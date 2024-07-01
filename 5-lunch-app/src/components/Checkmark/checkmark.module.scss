@@ -1,0 +1,83 @@
+@import '../../styles/tools';
+
+$checkbox_icon: url('../../assets/static/icons/icon_check.svg');
+$disabled_checkbox_icon: url('../../assets/static/icons/icon_disabled_check.svg');
+
+.checkboxWrapper {
+  @include flexbox-centered;
+  max-width: 15rem;
+  width: 100%;
+
+  label {
+    @include flexbox-centered;
+  }
+
+  span {
+    @include label-M;
+    line-height: $space-XS;
+    font-weight: 400;
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: $border-radius-small;
+    margin-right: $space-XXXXS;
+    border: 0.2rem solid $color-secondary-300;
+    cursor: pointer;
+
+    &:checked {
+      background-color: $color-secondary-300;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: $checkbox_icon;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 1.5rem;
+        color: transparent;
+        position: absolute;
+        left: 0.15rem;
+        top: 0.3rem;
+        width: 1.396rem;
+        height: 1.048rem;
+      }
+    }
+  }
+
+  &.error {
+    color: $color-red-500;
+
+    input[type='checkbox'] {
+      border-color: $color-red-500;
+    }
+
+    &:checked {
+      background-color: $color-red-500;
+    }
+  }
+
+  &.disabled {
+    color: $color-grey-500;
+
+    input[type='checkbox'] {
+      border-color: $color-grey-500;
+
+      &:checked {
+        border: 0.2rem solid $color-grey-300;
+        background-color: $color-grey-300;
+      }
+
+      &:checked::before {
+        background-image: $disabled_checkbox_icon;
+      }
+    }
+  }
+}

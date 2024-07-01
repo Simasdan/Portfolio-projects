@@ -1,0 +1,38 @@
+@import '/src/styles/_tools';
+
+.container {
+  display: flex;
+  align-items: left;
+  border-radius: $border-radius-regular;
+  padding: $space-XXS;
+  width: 40rem;
+  margin: auto;
+  text-align: left;
+
+  &.info {
+    background-color: $color-purple-500;
+  }
+
+  &.warning {
+    background-color: $color-red-500;
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .text {
+    margin-left: $space-XXS;
+    color: $color-white;
+    @include label-S;
+  }
+
+  path {
+    fill: $color-white;
+  }
+
+  @media (max-width: 40em) {
+    width: 24rem;
+  }
+}

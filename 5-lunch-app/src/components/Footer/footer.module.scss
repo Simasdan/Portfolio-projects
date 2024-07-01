@@ -1,0 +1,37 @@
+@import '../../styles/tools';
+
+.footer {
+    padding: $space-L $space-L $space-S $space-L;
+}
+
+p {
+    @include title-S;
+    color: $color-grey-500;
+}
+
+.footerLeft {
+    text-align: left;
+    width: 50%;
+    display: inline-block;
+
+    @include for-tablet-portrait-up { 
+        width: 33.33%;
+    }
+}
+
+.footerRight {
+    text-align: right;
+    width: 50%;
+    display: inline-block;
+    @include for-tablet-portrait-up {
+        width: 33.33%;
+    }
+}
+
+.footerMiddle {
+    width: 33.33%;
+    display: none;
+    text-align: center;
+    @include for-tablet-portrait-up {
+        display: inline-block;  }
+}

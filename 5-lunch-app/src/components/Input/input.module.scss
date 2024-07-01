@@ -1,0 +1,123 @@
+@import '../../styles/tools';
+
+$color-grey-disable-text: #bdbfc4;
+$color-grey-disable-border: #eeeff0;
+$color-grey-error-label: #272930;
+$color-red-error-text: #d3232f;
+$color-red-error-border: #ffc7c5;
+$space-7: 0.7rem;
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: $space-XXXXXS;
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    padding: $space-7 $space-XXXS;
+    border-radius: $border-radius-regular;
+    border: $color-grey-300 0.1rem solid;
+    outline: none;
+    color: $color-grey-input-text;
+    transition: 0.1s;
+    position: relative;
+
+    @include body-M;
+
+    &:focus {
+      border: none;
+      outline: $color-purple-500 0.2rem solid;
+      color: $color-primary-600;
+    }
+
+    &:invalid,
+    &--error {
+      border-color: $color-red-error-border;
+      color: $color-red-error-text;
+    }
+
+    &:disabled {
+      border-color: $color-grey-disable-border;
+      background-color: transparent;
+      &::placeholder {
+        color: $color-grey-disable-text;
+      }
+    }
+
+    &Icon {
+      position: absolute;
+      top: 3.5rem;
+      left: 1.25rem;
+      gap: 1rem;
+      z-index: 5;
+
+      path {
+        fill: $color-grey-400;
+      }
+
+      &__place {
+        padding-left: 4.1rem;
+      }
+    }
+  }
+}
+.label {
+  color: $color-primary-600;
+  @include label-S;
+
+  &--disabled {
+    color: $color-grey-disable-text;
+  }
+  &--error {
+    color: $color-grey-error-label;
+  }
+}
+
+.textarea {
+  width: 100%;
+  min-width: 32.3rem;
+  padding: $space-XXXXS $space-XXXS;
+  border-radius: $border-radius-regular;
+  border: $color-grey-300 0.1rem solid;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: $color-purple-500 0.2rem solid;
+    color: $color-primary-600;
+  }
+}
+
+.search {
+  &__wrapper {
+    position: relative;
+  }
+  &__result-box {
+    position: absolute;
+    width: 100%;
+    top: 7rem;
+    right: 0;
+    padding: $space-XXXXXS 0rem;
+    border: $color-grey-200 0.1rem solid;
+    border-radius: $border-radius-small;
+    box-shadow: $box-shadow-m;
+    color: $color-grey-500;
+
+    @include title-S;
+  }
+}
+
+.errorText {
+  position: absolute;
+  top: 6.4rem;
+  color: $color-red-error-text;
+
+  @include body-S;
+}

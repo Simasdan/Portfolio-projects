@@ -1,0 +1,191 @@
+@import '/src/styles/_tools';
+
+$border-radius-orderSummary: 1.2rem 0rem 0rem 1.2rem;
+
+.orderSummary {
+  min-width: 28.3rem;
+  max-width: 28.3rem;
+  min-height: 43.4rem;
+  max-height: calc(100vh - 24rem);
+  padding: $space-XS;
+  padding-right: $space-XXXXXS;
+  background-color: $color-white;
+  border-radius: $border-radius-orderSummary;
+  border: $color-grey-100 0.05rem;
+  box-shadow: $box-shadow-m;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transform: translateX(100%);
+  transition: $transition;
+
+  &Expanded {
+    transform: translateX(0);
+    transition: $transition;
+    right: 0;
+  }
+
+  &Hidden {
+    display: none;
+  }
+}
+
+.orderSummaryTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: $space-XS;
+  padding-bottom: $space-S;
+
+  &Text {
+    @include headline-S;
+    color: $color-primary-600;
+  }
+}
+
+.emptyCart {
+  .basketPhoto {
+    width: 12.4rem;
+    height: 8.6rem;
+    opacity: 70%;
+  }
+  &Text {
+    @include body-M;
+    color: $color-grey-500;
+  }
+}
+
+.separator {
+  width: 100%;
+  border-bottom: 0.1rem solid $color-grey-300;
+  margin-right: $space-XXXS;
+}
+
+.orderSummaryFooter {
+  display: flex;
+  flex-direction: column;
+  gap: $space-XXXS;
+  margin-right: $space-XXXS;
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-S;
+    margin-right: $space-XS;
+
+    &Price {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+
+      &Text {
+        @include title-S;
+        color: $color-grey-500;
+      }
+
+      &Amount {
+        @include title-L;
+        color: $color-primary-600;
+      }
+    }
+  }
+}
+
+.orderSummaryList {
+  max-height: 60.9rem;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.dayItems {
+  display: flex;
+  flex-direction: column;
+
+  &Header {
+    display: flex;
+    gap: $space-XXXS;
+    align-items: center;
+
+    &Day {
+      @include title-S;
+      color: $color-grey-500;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    margin-top: $space-XS;
+    gap: $space-XXXXS;
+
+    &Item {
+      display: flex;
+      justify-content: space-between;
+      gap: $space-XXXXS;
+
+      &Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: $space-XXS $space-XXXS;
+        gap: $space-XXXXS;
+
+        & p {
+          @include body-M;
+          color: $color-primary-600;
+        }
+
+        & svg {
+          width: 1.8rem;
+          height: 1.8rem;
+          cursor: pointer;
+          transition: 0.05s;
+
+          &:hover {
+            filter: brightness(125%);
+          }
+
+          & path {
+            fill: $color-red-500;
+          }
+
+          &:focus:not(:disabled) {
+            border: 0.2rem solid $color-purple-500;
+            outline: none;
+          }
+        }
+      }
+
+      &Content {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        gap: $space-XXS;
+        &Text {
+          & p {
+            @include title-XS;
+            text-transform: uppercase;
+            color: $color-grey-500;
+          }
+
+          & span {
+            @include body-S;
+            color: $color-primary-600;
+          }
+        }
+
+        & svg {
+          width: 4.5rem;
+          height: 4.4rem;
+        }
+
+        img {
+          width: 4.5rem;
+          height: 4.4rem;
+        }
+      }
+    }
+  }
+}

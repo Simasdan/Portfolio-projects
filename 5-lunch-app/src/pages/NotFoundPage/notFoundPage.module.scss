@@ -1,0 +1,48 @@
+@import '/src/styles/_tools';
+
+.errorPageLayout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.navContainer {
+  position: fixed;
+}
+
+.headerLine {
+  width: 100vw;
+  display: flex;
+  height: 6.3rem;
+  background-color: $color-primary-800;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    align-content: center;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.7rem;
+    height: 3.8rem;
+    z-index: 99999;
+  }
+
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.errorMessageContainer {
+  flex: content;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: $space-XXXXL;
+  h1,
+  h2 {
+    margin: $space-XXXXXS;
+  }
+}

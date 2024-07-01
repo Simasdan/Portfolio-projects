@@ -1,0 +1,49 @@
+@import '../../styles/tools';
+
+.container {
+  position: relative;
+  display: inline-block;
+
+  &:hover:not(.disabled) .overlay {
+    opacity: 0.05;
+  }
+}
+
+.btn {
+  padding: 0.9rem 1.6rem;
+  color: $color-grey-500;
+  border: none;
+  border-bottom: $color-grey-300 0.2rem solid;
+  background-color: transparent;
+
+  @include label-S;
+
+  &.selected {
+    color: $color-primary-600;
+    border-bottom: $color-secondary-400 0.2rem solid;
+  }
+
+  &:focus {
+    outline: 0.2rem solid $color-purple-500;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+  }
+}
+
+.overlay {
+  transition: 0.3s ease;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: $color-primary-600;
+  opacity: 0;
+  border-radius: 0.4rem;
+  pointer-events: none;
+}

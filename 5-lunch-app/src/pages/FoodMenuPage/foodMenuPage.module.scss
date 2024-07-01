@@ -1,0 +1,12 @@
+@import '/src/styles/_tools';
+
+.cardsContainer {
+  margin: $space-M auto 0rem auto;
+}
+
+.mealContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-M;
+  justify-content: center;
+}

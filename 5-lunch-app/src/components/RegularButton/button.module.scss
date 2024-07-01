@@ -1,0 +1,149 @@
+@import '/src/styles/_tools';
+
+.btn {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-regular;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0.2rem solid $color-purple-500;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+  }
+
+  &.primary {
+    background-color: $color-primary-800;
+    color: $color-white;
+    border: none;
+
+    &:hover:enabled {
+      background-color: $color-primary-600;
+    }
+
+    &:active:enabled {
+      background-color: $color-primary-400;
+    }
+
+    .icon {
+      path {
+        fill: $color-secondary-300;
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: $color-white;
+    color: $color-primary-600;
+    border: $color-secondary-300 0.1rem solid;
+
+    &:hover:enabled {
+      background-color: $color-secondary-100;
+    }
+
+    &:active:enabled {
+      background-color: $color-secondary-200;
+    }
+
+    .icon {
+      path {
+        fill: $color-secondary-300;
+      }
+    }
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    color: $color-primary-600;
+    border: none;
+
+    &:hover:enabled {
+      background-color: $color-secondary-100;
+    }
+
+    &:active:enabled {
+      background-color: $color-secondary-200;
+    }
+
+    .icon {
+      path {
+        fill: $color-primary-600;
+      }
+    }
+  }
+
+  &.large {
+    padding: $space-XXXXS;
+
+    @include label-L;
+
+    .text {
+      margin: 0rem $space-XXXXS;
+    }
+    .icon {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
+  &.medium {
+    padding: $space-XXXXS;
+
+    @include label-M;
+
+    .text {
+      margin: 0rem $space-XXXXS;
+    }
+    .icon {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
+  &.small {
+    padding: $space-XXXXXS $space-XXXXS;
+
+    @include label-S;
+
+    .icon {
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+  }
+
+  &.xsmall {
+    padding: 0.7rem $space-XXXXS;
+
+    @include label-XS;
+
+    .icon {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
+  }
+
+  &.add {
+    &.small .text {
+      margin-left: $space-XXXXS;
+    }
+    &.xsmall .text {
+      margin-left: $space-XXXXXS;
+    }
+  }
+
+  &.arrow {
+    &.small .text {
+      margin-right: $space-XXXXS;
+    }
+    &.xsmall .text {
+      margin-right: $space-XXXXXS;
+    }
+  }
+}
