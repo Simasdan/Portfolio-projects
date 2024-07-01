@@ -28,7 +28,7 @@ const changeBackground = () => {
 window.addEventListener('scroll', changeBackground)
     
   return (
-      <nav className={`navigation-bar ${props.isOpen ? 'open' : ''} ${navbar ? 'active' : ''}`}>
+      <nav className={`navigation-bar ${props.isOpen ? 'open active' : ''} ${navbar ? 'active' : ''}`}>
         <button className='h1 h1-flow'><h1>Simdan</h1></button>
         <button className='navbar-burger' onClick={toggleMeniu}>
           <FaBars />

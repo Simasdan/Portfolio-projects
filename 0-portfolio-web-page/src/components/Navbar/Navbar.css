@@ -7,7 +7,7 @@
     color: #AAABB8;
     position: fixed;
     top: 0;
-    z-index: 1000
+    z-index: 10000
 }
 
 .navigation-bar.active {

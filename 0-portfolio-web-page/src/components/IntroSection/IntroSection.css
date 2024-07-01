@@ -21,7 +21,7 @@
     border: 8px solid transparent; 
     border-radius: 50%;
     background-size: cover;
-    animation: spin 2s linear infinite;
+    /* animation: spin 2s linear infinite; */
     margin-bottom: 50px;
 }
 
@@ -33,7 +33,7 @@
     background-image: url(./profilio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    animation: spinReverse 2s linear infinite;
+    /* animation: spinReverse 2s linear infinite; */
 }
 
 @keyframes spin {

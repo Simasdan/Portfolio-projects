@@ -37,7 +37,7 @@ const AboutSection = () => {
             </defs>
           </svg>
         </a>
-        <a href="https://www.facebook.com/simonas.danielius" target="_blank">
+        {/* <a href="https://www.facebook.com/simonas.danielius" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 235 235">
             <g transform="">
               <g fill="#78c7e9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none">
@@ -58,7 +58,7 @@ const AboutSection = () => {
               </g>
             </g>
           </svg>
-        </a>
+        </a> */}
       </div>
     </div>
   )
