@@ -3,6 +3,10 @@
 .footer {
     padding: $space-L 0 $space-S 0;
     display: flex;
+
+    @include breakpoint-large {
+        margin: 0 2rem;
+    }
 }
 
 p {

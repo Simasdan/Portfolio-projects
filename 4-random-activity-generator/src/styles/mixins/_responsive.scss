@@ -5,7 +5,7 @@
 }
 
 @mixin breakpoint-small {
-    @media (max-width: 699) {
+    @media (max-width: 699px) {
         @content;
     }
 }
