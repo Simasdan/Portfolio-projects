@@ -7,11 +7,19 @@
     @include breakpoint-large {
         margin: 0 2rem;
     }
+
+    @include breakpoint-medium {
+        margin: 0 2rem;
+    }
 }
 
 p {
     @include body-S;
     color: $color-grey-500;
+
+    @include breakpoint-xsmall {
+        font-size: 1rem;
+    }
 }
 
 .footerLeft {

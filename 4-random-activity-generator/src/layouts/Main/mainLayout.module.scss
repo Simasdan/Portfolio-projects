@@ -1,15 +1,23 @@
 @import '../../styles/tools';
 
 .container {
-    margin: 0 auto;
-    max-width: 88rem;
-    padding: $space-XXXL 0 0 0;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 88rem;
+  padding: $space-XXXL 0 0 0;
+  text-align: center;
 
   .mainWrapper {
     display: flex;
     flex-direction: column;
     gap: $space-L;
+
+    @include breakpoint-medium {
+      margin: 0 2rem;
+    }
+
+    @include breakpoint-xsmall {
+      gap: $space-XS;
+  }
 
     .activityParams {
       display: flex;

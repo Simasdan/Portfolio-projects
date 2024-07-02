@@ -15,7 +15,16 @@
     padding: 1rem $space-S 1rem $space-XXS;
 
     @include label-L;
-    
+
+    @include breakpoint-xsmall {
+        font-size: 1rem;
+    }
+
+    @include breakpoint-xxsmall {
+        width: 100%;
+        padding: 1rem $space-XXXS 1rem $space-XXS;
+    }
+
     &:hover {
         background-color: $color-grey-400;
         border: $color-grey-400;
@@ -37,7 +46,7 @@
     padding: 1rem $space-XXXS;
 
     @include label-L;
-    
+
     &:hover {
         background-color: $color-grey-100;
     }

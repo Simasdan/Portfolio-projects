@@ -12,6 +12,10 @@
     width: 100%;
     height: 34rem;
 
+    @include breakpoint-medium {
+        display: inline;
+        height: 100%;
+    }
 
     .activityCard {
         padding: $space-XXS $space-XXS 0 $space-XXS;
@@ -22,9 +26,17 @@
         align-items: center;
         height: 100%;
 
+        @include breakpoint-medium {
+            max-width: 100%;
+        }
+
         .title {
             width: 100%;
             height: 12rem;
+
+            @include breakpoint-medium {
+                height: 100%
+            }
 
             .activityCardTitle {
                 @include headline-L;
@@ -50,6 +62,10 @@
                 justify-content: space-evenly;
                 margin-bottom: $space-XXS;
                 gap: $space-XXXXS;
+
+                @include breakpoint-xsmall {
+                    flex-wrap: wrap;
+                }
 
                 .tab {
                     width: 12rem;
@@ -85,90 +101,109 @@
         }
 
         &.busywork {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-busywork;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-busywork-light;
             }
         }
 
         &.charity {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-charity;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-charity-light;
             }
         }
 
         &.cooking {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-cooking;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-cooking-light;
             }
         }
 
         &.diy {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-diy;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-diy-light;
             }
         }
 
         &.education {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-education;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-education-light;
             }
         }
-    
+
         &.music {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-music;
             }
-    
+
             .tab {
-                border: 0.1rem solid $color-music-light;;
+                border: 0.1rem solid $color-music-light;
+                ;
             }
         }
 
         &.recreational {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-recreational;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-recreational-light;
             }
         }
 
         &.relaxation {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-relaxation;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-relaxation-light;
             }
         }
 
         &.social {
-            .activityCardTitle, .tab p {
+
+            .activityCardTitle,
+            .tab p {
                 color: $color-social;
             }
-    
+
             .tab {
                 border: 0.1rem solid $color-social-light;
             }

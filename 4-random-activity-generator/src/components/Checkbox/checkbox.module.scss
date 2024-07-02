@@ -14,12 +14,20 @@ $checkbox_icon: url('../../assets/icons/icon_check.svg');
   label {
     @include flexbox-centered;
 
+    @include breakpoint-xsmall {
+      justify-content: flex-start;
+  }
+
     gap: 1.5rem;
     width: 100%;
   }
 
   span {
     @include label-L;
+
+    @include breakpoint-xsmall {
+      font-size: 1rem;
+    }
 
     cursor: pointer;
     text-wrap: nowrap;

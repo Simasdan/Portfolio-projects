@@ -4,8 +4,26 @@
     }
 }
 
+@mixin breakpoint-medium {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+
 @mixin breakpoint-small {
     @media (max-width: 699px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xsmall {
+    @media (max-width: 560px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxsmall {
+    @media (max-width: 420px) {
         @content;
     }
 }
