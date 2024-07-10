@@ -1,5 +1,4 @@
 import styles from './activityCard.module.scss';
-import { useEffect } from 'react';
 import Button, { ButtonAppearance, ButtonIcon, ButtonText } from '../../components/Button/Button';
 import {renderImage, ActivityImage} from './helpers';
 
@@ -14,15 +13,6 @@ interface ActivityCardProps {
 }
 
 const ActivityCard = ({ title, category, participants, price, img, link, accessibility }: ActivityCardProps) => {
-
-    const fetchActivity = async () => {
-        const response = await fetch('http://localhost:3002/activities');
-        await response.json();
-    }
-
-    useEffect(() => {
-        fetchActivity();
-    }, []);
 
     const capitalizeFirstLetter = (word: string) => {
         return word.charAt(0).toUpperCase() + word.slice(1)

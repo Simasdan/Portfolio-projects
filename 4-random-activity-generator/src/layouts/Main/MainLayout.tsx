@@ -22,10 +22,15 @@ const MainLayout = () => {
   const [isAccessible, setIsAccessible] = useState<boolean>(false);
 
   const fetchActivity = async () => {
-    const response = await fetch('http://localhost:3002/activities');
-    const data: Activity[] = await response.json();
-    setData(data);
-  }
+    try {
+      const response = await fetch('https://raw.githubusercontent.com/simasdan/random-activity-generator-back/main/db.json');
+      const result = await response.json();
+      const activities = result.activities;
+      setData(activities);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   useEffect(() => {
     fetchActivity();
@@ -33,12 +38,16 @@ const MainLayout = () => {
 
   useEffect(() => {
     if (data.length > 0) {
-      setCurrentActivity(getRandomActivity(data, isAccessible))
+      const activity = getRandomActivity(data, isAccessible);
+      setCurrentActivity(activity);
     }
-  }, [data])
+  }, [data]);
 
-  const getRandomActivity = (activities: Activity[], accessible: boolean): Activity => {
+  const getRandomActivity = (activities: Activity[], accessible: boolean): Activity | null => {
     const filteredData = accessible ? activities.filter(activity => activity.accessibility < 0.5) : activities;
+    if (filteredData.length === 0) {
+      return null;
+    }
 
     const randomIndex = Math.floor(Math.random() * filteredData.length);
     return filteredData[randomIndex];
@@ -114,7 +123,8 @@ const MainLayout = () => {
   };
 
   const handleGenerateButtonClick = () => {
-    setCurrentActivity(getRandomActivity(data, isAccessible))
+    const activity = getRandomActivity(data, isAccessible);
+    setCurrentActivity(activity);
   };
 
   return (
