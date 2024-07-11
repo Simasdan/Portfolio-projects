@@ -27,7 +27,7 @@ const CarouselWrapper = () => {
 
     return (
         <div>
-            <Carousel responsive={responsive} showDots={true} infinite={true} draggable={true} swipeable={true}>
+            <Carousel responsive={responsive} showDots={true} infinite={true} draggable={true} swipeable={true} >
                 <ProjectCard
                     imageClass={'first'}
                     title={'Porsche Configurator'}
@@ -59,7 +59,7 @@ const CarouselWrapper = () => {
                 <ProjectCard
                     imageClass={'fourth'}
                     title={'React Portfolio Page'}
-                    description={'This is a React portfolio website project that You are currently in. This website serves as a showcase of my skills and projects.'}
+                    description={'This is a React portfolio website project that You are currently in. This website serves as my portfolio and it is to showcase my skills and projects. It is fully responsive for all screen sizes, built with simple React and CSS styling'}
                     techStack={'React and CSS'}
                     livePreviewLink={'https://dynamic-douhua-5422e9.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/0-portfolio-web-page'} />

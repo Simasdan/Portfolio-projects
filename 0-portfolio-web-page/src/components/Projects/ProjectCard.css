@@ -9,6 +9,7 @@
     margin: 20px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
     height: calc(100% - 20px * 2);
+    overflow: hidden;
 }
 
 .project-card .project-card-image {
@@ -68,10 +69,59 @@
 }
 
 .project-card .project-card-text .project-card-text-text p {
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
+    --max-lines: 5;
+    --line-height: 1.2;
+
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+
     overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+.project-card .project-card-text .project-card-text-text p:has(+ .expand-button:checked) {
+    max-height: none;
+}
+
+.project-card .project-card-text .project-card-text-text p:has(+ .expand-button:not(:checked)):before {
+    content: "";
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, #AAABB8);
+}
+
+.expand-button {
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    appearance: none;
+    cursor: pointer;
+}
+
+.expand-button::before {
+    content: '(Read more)';
+    font-family: "Fredoka", sans-serif;
+    font-size: 18px;
+    color: #464866;
+    font-weight: bold;
+}
+
+.expand-button:checked::before {
+    content: '(Read less)';
+}
+
+.expand-button:hover::before {
+    color: rgba(37, 39, 77);
+    text-decoration: underline;
+}
+
+.project-card .project-card-text .project-card-text-text p:has(+ .expand-button:checked) {
+    height: none;
 }
 
 .project-card .project-card-text .project-card-text-text p,

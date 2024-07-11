@@ -1,13 +1,15 @@
 import './ProjectCard.css';
 
-const ProjectCard = ({imageClass, title, description, techStack, livePreviewLink, codeLink}) => {
+const ProjectCard = ({ imageClass, title, description, techStack, livePreviewLink, codeLink }) => {
+
     return (
-        <div className="project-card">
+        <div className='project-card'>
             <div className={`project-card-image ${imageClass}`}></div>
             <div className="project-card-text">
                 <div className='project-card-text-text'>
                     <h4>{title}</h4>
                     <p>{description}</p>
+                    <input className='expand-button' type="checkbox"/>
                 </div>
                 <div className='project-card-text-links'>
                     <p><span className='techStack'>Tech Stack:</span> {techStack}</p>
