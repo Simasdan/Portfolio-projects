@@ -1,19 +1,18 @@
-import './ProjectCard.css'
+import './ProjectCard.css';
 
-const FirstProject = () => {
+const ProjectCard = ({imageClass, title, description, techStack, livePreviewLink, codeLink}) => {
     return (
         <div className="project-card">
-            <div className='project-card-image fourth'></div>
+            <div className={`project-card-image ${imageClass}`}></div>
             <div className="project-card-text">
                 <div className='project-card-text-text'>
-                    <h4>React Portfolio Page</h4>
-                    <p>This is a React portfolio website project that You are currently in. This website serves as a showcase of my skills and projects.</p>
+                    <h4>{title}</h4>
+                    <p>{description}</p>
                 </div>
                 <div className='project-card-text-links'>
-                    <p><span className='techStack'>Tech Stack:</span> React and CSS</p>
+                    <p><span className='techStack'>Tech Stack:</span> {techStack}</p>
                     <div className="project-links">
-
-                        <a href="https://dynamic-douhua-5422e9.netlify.app/" target="_blank">
+                        <a href={livePreviewLink} target="_blank">
                             <div>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11.2867 8.7133C10.6041 8.031 9.67846 7.64771 8.71334 7.64771C7.74821 7.64771 6.82259 8.031 6.14 8.7133L3.56584 11.2866C2.88324 11.9692 2.49976 12.895 2.49976 13.8604C2.49976 14.8257 2.88324 15.7515 3.56584 16.4341C4.24844 17.1167 5.17424 17.5002 6.13959 17.5002C7.10493 17.5002 8.03074 17.1167 8.71334 16.4341L10 15.1475" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
@@ -22,7 +21,7 @@ const FirstProject = () => {
                             </div>
                             Live Preview
                         </a>
-                        <a href="https://github.com/Simasdan/Portfolio-projects/tree/main/0-portfolio-web-page" target="_blank">
+                        <a href={codeLink} target="_blank">
                             <div>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_10_90)">
@@ -44,4 +43,4 @@ const FirstProject = () => {
     )
 }
 
-export default FirstProject
+export default ProjectCard

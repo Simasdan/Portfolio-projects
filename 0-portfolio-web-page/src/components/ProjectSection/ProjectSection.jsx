@@ -1,4 +1,3 @@
-import FirstProject from '../Projects/FirstProject';
 import CarouselWrapper from '../ProjectSection/CarouselWrapper'
 import './ProjectSection.css';
 

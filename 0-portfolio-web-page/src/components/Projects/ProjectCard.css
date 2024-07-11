@@ -39,6 +39,13 @@
     background-color: #fff;
 }
 
+.project-card .project-card-image.fifth {
+    background-image: url(images/RandomActivityGenerator.png);
+    background-position: center;
+    background-size: contain;
+    background-color: #fff;
+}
+
 .project-card .project-card-text {
     display: flex;
     flex-direction: column;
