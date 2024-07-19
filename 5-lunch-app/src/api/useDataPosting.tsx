@@ -17,7 +17,7 @@ function usePost<T>(endpoint: Endpoint): PostResult<T> {
   const postData = async (data: T) => {
     setLoading(true);
     try {
-      const url = `http://localhost:3002/${endpoint}`;
+      const url = `https://lunchapp-backend-production.up.railway.app/${endpoint}`;
       const response = await axios.post<T>(url, data);
 
       if (response.status === 201) {

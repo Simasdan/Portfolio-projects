@@ -17,7 +17,7 @@ function usePatch<T>(endpoint: Endpoint): PutResult<T> {
   const putData = async (data: T, id: string) => {
     setLoading(true);
     try {
-      const url = `http://localhost:3002/${endpoint}/${id}`;
+      const url = `https://lunchapp-backend-production.up.railway.app/${endpoint}/${id}`;
       const response = await axios.patch<T>(url, data);
 
       if (response.status === 201 || response.status === 204 || response.status === 200) {

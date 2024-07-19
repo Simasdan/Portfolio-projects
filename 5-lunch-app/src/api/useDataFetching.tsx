@@ -17,7 +17,7 @@ function useFetch<T>(endpoint: Endpoint, id?: string): FetchResult<T> {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const url = `http://localhost:3002/${endpoint}${id ? `/${id}` : ''}`;
+        const url = `https://lunchapp-backend-production.up.railway.app/${endpoint}${id ? `/${id}` : ''}`;
         const response = await axios.get<T>(url);
         setData(response.data);
       } catch (fetchError) {
