@@ -47,6 +47,13 @@
     background-color: #fff;
 }
 
+.project-card .project-card-image.sixth {
+    background-image: url(images/lunchapp.png);
+    background-position: center;
+    background-size: contain;
+    background-color: #fff;
+}
+
 .project-card .project-card-text {
     display: flex;
     flex-direction: column;

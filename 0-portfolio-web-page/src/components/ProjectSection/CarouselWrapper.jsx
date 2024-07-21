@@ -29,19 +29,26 @@ const CarouselWrapper = () => {
         <div>
             <Carousel responsive={responsive} showDots={true} infinite={true} draggable={true} swipeable={true} >
                 <ProjectCard
+                    imageClass={'sixth'}
+                    title={'Lunch App'}
+                    description={'This project is a fully responsive lunch application featuring login and registration pages, as well as a meal ordering interface. Data for rendering is sourced from a JSON server. Upon accessing the application, a modal will appear, providing guidance on how to log in for testing purposes and instructions for using the meal ordering layout. Additionally, the application addresses various edge cases, which are explained in detail within the modals. The app was built utilizing best practices for code reusability, ensuring a maintainable and scalable codebase.'}
+                    techStack={'React, TypeScript and SCSS'}
+                    livePreviewLink={'https://tangerine-brigadeiros-d5c2da.netlify.app/'}
+                    codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/5-lunch-app'} />
+                <ProjectCard
+                    imageClass={'fifth'}
+                    title={'Random Activity Generator'}
+                    description={'This project is a random activity generator. Activities are being randomly generated from JSON server, fetching required data. It is fully responsive based on browser size. There is a checkbox for filtering accessible activities, which allows to load only accessible activities. Generate new activity button loads new random activity. Each activity has its own color styling and image based on their category.'}
+                    techStack={'React, TypeScript and SCSS'}
+                    livePreviewLink={'https://zippy-selkie-ac1252.netlify.app/'}
+                    codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/4-random-activity-generator'} />
+                <ProjectCard
                     imageClass={'first'}
                     title={'Porsche Configurator'}
                     description={'This project is a car configurator featuring several selections, an image slider that dynamically changes colors based on the color selection, and calculates the total amount in euros (€) based on the configurator selections. Additionally, it transfers to the order page after clicking the "Order" button.'}
                     techStack={'HTML, CSS and JavaScript'}
                     livePreviewLink={'https://preeminent-centaur-a5d51a.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/portfolio-projects/tree/main/1-porsche%20configurator'} />
-                <ProjectCard
-                    imageClass={'fifth'}
-                    title={'Random Activity Generator'}
-                    description={'This project is a random activity generator. Activities are being randomly generated from db.json file, fetching required data. It is fully responsive based on browser size. There is a checkbox for filtering accessible activities, which allows to load only accessible activities. Generate new activity button loads new random activity. Each activity has its own color styling and image based on their category.'}
-                    techStack={'React, TypeScript and SCSS'}
-                    livePreviewLink={'https://zippy-selkie-ac1252.netlify.app/'}
-                    codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/4-random-activity-generator'} />
                 <ProjectCard
                     imageClass={'third'}
                     title={'React Online Shop'}
