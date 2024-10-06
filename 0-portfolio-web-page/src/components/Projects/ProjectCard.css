@@ -54,6 +54,13 @@
     background-color: #fff;
 }
 
+.project-card .project-card-image.seventh {
+    background-image: url(images/universitetaslt.png);
+    background-position: center;
+    background-size: contain;
+    background-color: blue;
+}
+
 .project-card .project-card-text {
     display: flex;
     flex-direction: column;

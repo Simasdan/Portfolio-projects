@@ -36,6 +36,13 @@ const CarouselWrapper = () => {
                     livePreviewLink={'https://tangerine-brigadeiros-d5c2da.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/5-lunch-app'} />
                 <ProjectCard
+                    imageClass={'seventh'}
+                    title={'Universitetas.lt'}
+                    description={'This is an online platform providing diverse information on business creation, offering assistance to both beginners and seasoned entrepreneurs! I am part of this project as a front-end developer.'}
+                    techStack={'React, TypeScript and SCSS'}
+                    livePreviewLink={'https://www.universitetas.lt'}
+                    />
+                <ProjectCard
                     imageClass={'fifth'}
                     title={'Random Activity Generator'}
                     description={'This project is a random activity generator. Activities are being randomly generated from JSON server, fetching required data. It is fully responsive based on browser size. There is a checkbox for filtering accessible activities, which allows to load only accessible activities. Generate new activity button loads new random activity. Each activity has its own color styling and image based on their category.'}
