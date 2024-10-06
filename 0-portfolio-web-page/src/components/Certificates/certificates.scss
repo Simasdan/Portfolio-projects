@@ -6,7 +6,8 @@
     flex-direction: column;
     gap: 50px;
     padding: 20px;
-    height: 100vh;
+    height: calc(100vh + 90px);
+
 
     h2 {
         font-style: normal;
