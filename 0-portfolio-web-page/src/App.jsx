@@ -7,6 +7,7 @@ import Contacts from './components/Contacts/Contacts'
 import Footer from './components/Footer/Footer'
 import IntroSection from './components/IntroSection/IntroSection'
 import React, { useState, useRef } from 'react'
+import Certificates from './components/Certificates/Certificates'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     aboutSectionRef: useRef(),
     introSectionRef: useRef(),
     secondSectionRef: useRef(),
+    certificatesRef: useRef(),
     projectSectionRef: useRef(),
     contactSectionRef: useRef()
   };
@@ -40,6 +42,7 @@ function App() {
           <div ref={allRefs.aboutSectionRef}><AboutSection /></div>
           <div ref={allRefs.introSectionRef}><IntroSection /></div>
           <div ref={allRefs.secondSectionRef}><SecondSection /></div>
+          <div ref={allRefs.certificatesRef}><Certificates/></div>
           <div ref={allRefs.projectSectionRef}><ProjectSection /></div>
           <div ref={allRefs.contactSectionRef}><Contacts /></div>
           <div className="break"></div>
