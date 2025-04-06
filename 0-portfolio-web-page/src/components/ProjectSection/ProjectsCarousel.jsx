@@ -1,33 +1,64 @@
-import React from 'react'
-import './CarouselWrapper.css'
+import './ProjectsCarousel.scss';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import LeftButton from '../../assets/icons/leftArrowIcon.svg?react';
+import RightButton from '../../assets/icons/rightArrowIcon.svg?react';
+import { useEffect } from 'react';
 import ProjectCard from '../Projects/ProjectCard';
 
-const CarouselWrapper = () => {
+const ProjectsCarousel = () => {
 
     const responsive = {
         superLargeDesktop: {
-            breakpoint: { max: 1920, min: 1040 },
-            items: 3
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
         },
         desktop: {
-            breakpoint: { max: 1040, min: 768 },
-            items: 2
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
         },
         tablet: {
-            breakpoint: { max: 768, min: 375 },
-            items: 1
+            breakpoint: { max: 1024, min: 876 },
+            items: 2
         },
         mobile: {
-            breakpoint: { max: 375, min: 0 },
+            breakpoint: { max: 876, min: 0 },
             items: 1
         }
     };
 
+    const CustomLeftArrow = ({ onClick }) => (
+        <button className='customLeftArrow' onClick={onClick}>
+            <LeftButton />
+        </button>
+    );
+
+    const CustomRightArrow = ({ onClick }) => (
+        <button className='customRightArrow' onClick={onClick}>
+            <RightButton />
+        </button>
+    );
+
+    useEffect(() => {
+        const carouselList = document.querySelector('.react-multi-carousel-list');
+        if (carouselList) {
+            carouselList.style.borderRadius = '2.5rem';
+            carouselList.style.overflow = 'hidden';
+        }
+    }, []);
+
     return (
-        <div>
-            <Carousel responsive={responsive} showDots={true} infinite={true} draggable={true} swipeable={true} >
+        <>
+            <Carousel
+                responsive={responsive}
+                infinite={true}
+                showDots={true}
+                draggable={true}
+                swipeable={true}
+                customLeftArrow={<CustomLeftArrow onClick={() => { }} />}
+                customRightArrow={<CustomRightArrow onClick={() => { }} />}
+            >
+
                 <ProjectCard
                     imageClass={'sixth'}
                     title={'Lunch App'}
@@ -35,16 +66,23 @@ const CarouselWrapper = () => {
                     techStack={'React, TypeScript and SCSS'}
                     livePreviewLink={'https://tangerine-brigadeiros-d5c2da.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/5-lunch-app'} />
-                <ProjectCard
+                {/* <ProjectCard
                     imageClass={'seventh'}
                     title={'Universitetas.lt'}
                     description={'This is an online platform providing diverse information on business creation, offering assistance to both beginners and seasoned entrepreneurs! I am part of this project as a front-end developer.'}
                     techStack={'React, TypeScript and SCSS'}
                     livePreviewLink={'https://www.universitetas.lt'}
-                    />
+                    /> */}
+                <ProjectCard
+                    imageClass={'eight'}
+                    title={'Woof.lt'}
+                    description={'This is an online dog grooming platform for Lithuania based dog groomers and owners.'}
+                    techStack={'React, TypeScript and SCSS'}
+                    livePreviewLink={'https://woof.lt/'}
+                />
                 <ProjectCard
                     imageClass={'fifth'}
-                    title={'Random Activity Generator'}
+                    title={'Activity Generator'}
                     description={'This project is a random activity generator. Activities are being randomly generated from JSON server, fetching required data. It is fully responsive based on browser size. There is a checkbox for filtering accessible activities, which allows to load only accessible activities. Generate new activity button loads new random activity. Each activity has its own color styling and image based on their category.'}
                     techStack={'React, TypeScript and SCSS'}
                     livePreviewLink={'https://zippy-selkie-ac1252.netlify.app/'}
@@ -77,9 +115,10 @@ const CarouselWrapper = () => {
                     techStack={'React and CSS'}
                     livePreviewLink={'https://dynamic-douhua-5422e9.netlify.app/'}
                     codeLink={'https://github.com/Simasdan/Portfolio-projects/tree/main/0-portfolio-web-page'} />
+
             </Carousel>
-        </div>
+        </>
     )
 }
 
-export default CarouselWrapper
+export default ProjectsCarousel

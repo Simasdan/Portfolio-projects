@@ -1,0 +1,155 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #AAABB8;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    height: calc(100% - 20px * 2);
+    overflow: hidden;
+
+    .project-card-image {
+        width: 100%;
+        height: 260px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 20px 20px 0px 0px;
+
+        &.first {
+            background-image: url(images/FirstProject.png);
+        }
+
+        &.second {
+            background-image: url(images/SecondProject.png);
+        }
+
+        &.third {
+            background-image: url(images/ThirdProject.png);
+        }
+
+        &.fourth {
+            background-image: url(images/FourthProject.png);
+            background-position: center;
+            background-size: contain;
+            background-color: #fff;
+        }
+
+        &.fifth {
+            background-image: url(images/RandomActivityGenerator.png);
+            background-position: center;
+            background-size: contain;
+            background-color: #fff;
+        }
+
+        &.sixth {
+            background-image: url(images/lunchapp.png);
+            background-position: center;
+            background-size: contain;
+            background-color: #fff;
+        }
+
+        &.seventh {
+            background-image: url(images/universitetaslt.png);
+            background-position: center;
+            background-size: contain;
+            background-color: blue;
+        }
+
+        &.eight {
+            background-image: url(images/WoofLt.png);
+            background-position: center;
+            background-size: contain;
+            background-color: #fff;
+        }
+    }
+
+    .project-card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 20px;
+        flex: 1;
+
+        .project-card-text-text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex: 1;
+
+            h4 {
+                font-size: 28px;
+                color: rgba(37, 39, 77);
+                text-align: center;
+
+                @media only screen and (max-width: 1250px) {
+                    font-size: 22px;
+                }
+            }
+
+            p {
+                color: #464866;
+                text-align: left;
+                font-size: 18px;
+            }
+
+            .openModal {
+                width: 110px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                appearance: none;
+                cursor: pointer;
+                padding: 5px;
+                border: 2px solid #AAABB8;
+                border-radius: 25px;
+                text-align: center;
+                color: rgb(37, 39, 77);
+                font-size: 14px;
+
+                &:hover {
+                    border: 2px solid rgb(37, 39, 77);
+                    color: rgb(37, 39, 77);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .project-card-text-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            p {
+                color: #464866;
+                text-align: left;
+                font-size: 18px;
+
+                .techStack {
+                    font-weight: bold;
+                }
+            }
+
+            .project-links {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 70px;
+                width: 100%;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    color: rgba(37, 39, 77);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

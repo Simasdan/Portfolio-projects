@@ -35,14 +35,14 @@ function App() {
     <>
       <div className='container-fluid'>
         <Navbar infoToParent={infoFromChild}
-                allRefs={allRefs}
-                isOpen={isOpen}
-                setIsOpen={setIsOpen} />
+          allRefs={allRefs}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen} />
         <div className='container'>
           <div ref={allRefs.aboutSectionRef}><AboutSection /></div>
           <div ref={allRefs.introSectionRef}><IntroSection /></div>
           <div ref={allRefs.secondSectionRef}><SecondSection /></div>
-          <div ref={allRefs.certificatesRef}><Certificates/></div>
+          <div ref={allRefs.certificatesRef}><Certificates /></div>
           <div ref={allRefs.projectSectionRef}><ProjectSection /></div>
           <div ref={allRefs.contactSectionRef}><Contacts /></div>
           <div className="break"></div>

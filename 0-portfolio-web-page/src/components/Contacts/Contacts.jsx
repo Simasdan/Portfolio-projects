@@ -5,8 +5,8 @@ const Contacts = () => {
         <div className='contacts-wrapper'>
             <h3>Simonas Danielius</h3>
             <div className='contacts-wrapper-text'>
-                <h4>+370 635 42429</h4>
-                <h4>s.danielius8@gmail.com</h4>
+                <a href="tel:+37063542429">+370 635 42429</a>
+                <a href="mailto:s.danielius8@gmail.com">s.danielius8@gmail.com</a>
                 <div className='contacts-wrapper-text-svg-group'>
                     <a href="https://github.com/Simasdan/portfolio-projects" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" height="30" width="30">

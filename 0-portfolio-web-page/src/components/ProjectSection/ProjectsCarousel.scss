@@ -1,0 +1,35 @@
+.customLeftArrow {
+    position: absolute;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 430px) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.customRightArrow {
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 430px) {
+        width: 35px;
+        height: 35px;
+    }
+}
