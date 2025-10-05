@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
-  base: '/0-portfolio-web-page/',
+  base: '/Portfolio-projects/0-portfolio-web-page/',
   plugins: [
     react(),
     svgr({
