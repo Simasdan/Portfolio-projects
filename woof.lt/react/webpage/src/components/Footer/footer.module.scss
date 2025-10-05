@@ -1,0 +1,198 @@
+@use '../../styles/mixins/responsive' as *;
+@use '../../styles/mixins/flexbox' as *;
+
+.footerWraper {
+    @include flexbox-centered;
+
+    padding: 2.4rem 6rem;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+
+    @include for-phoneL-only {
+        display: none;
+    }
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    .footerLinkWrapper {
+        max-width: 31rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        background-color: #FFFFFF;
+
+        .WoofLogo {
+            background-color: #FFFFFF;
+        }
+
+        .footerLink {
+            font-family: Poppins;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            text-align: center;
+            color: #3F1E11;
+            text-decoration: none;
+            background-color: #FFFFFF;
+        }
+
+        .activeLink {
+            color: #FF7500;
+            font-weight: 550;
+        }
+    }
+
+    .socialIconWrapper {
+        @include flexbox-centered;
+
+        gap: 1rem;
+        background-color: #FFFFFF;
+
+        li {
+            list-style: none;
+
+            @include flexbox-centered;
+
+            a {
+                @include flexbox-centered;
+
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.allRightsWrapper {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 6rem 4rem 6rem;
+
+    @include for-phoneL-only {
+        display: none;
+    }
+
+    @include for-phone-only {
+        display: none;
+    }
+
+    p {
+        background-color: #FFFFFF;
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        letter-spacing: 0%;
+        color: #3F1E11;
+    }
+
+    .email {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        letter-spacing: 0%;
+        color: #3F1E11;
+        background-color: #FFFFFF;
+        text-decoration: none;
+    }
+}
+
+.mobileFooterWrapper {
+    padding: 4rem 2rem;
+    width: 100%;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: #FFFFFF;
+
+    @include for-phoneL-only {
+        display: flex;
+    }
+
+    @include for-phone-only {
+        display: flex;
+    }
+
+    .footerLink {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #3F1E11;
+        text-decoration: none;
+        background-color: #FFFFFF;
+    }
+
+    .activeLink {
+        color: #FF7500;
+        font-weight: 550;
+    }
+
+    .socialIconWrapper {
+        @include flexbox-centered;
+
+        gap: 1.5rem;
+        background-color: #FFFFFF;
+
+        li {
+            list-style: none;
+
+            @include flexbox-centered;
+
+            a {
+                @include flexbox-centered;
+
+                background-color: #FFFFFF;
+            }
+        }
+    }
+
+    .WoofLogo {
+        background-color: #FFFFFF;
+    }
+
+    .email {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        letter-spacing: 0%;
+        background-color: #FFFFFF;
+        text-decoration: none;
+        color: #FF7500;
+    }
+
+    .languageWrapper {
+        @include flexbox-centered;
+
+        gap: 0.7rem;
+        cursor: pointer;
+
+        h4 {
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            letter-spacing: 0%;
+        }
+    }
+
+    .allRightsText {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        letter-spacing: 0%;
+        color: #3F1E11;
+        background-color: #FFFFFF;
+    }
+}

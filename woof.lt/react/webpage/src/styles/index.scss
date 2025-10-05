@@ -1,0 +1,18 @@
+/* Imports for global variables and styles */
+@use '_tools.scss';
+
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+html {
+  font-size: 10px;
+}
+
+/* stylelint-enable scale-unlimited/declaration-strict-value */
+
+* {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FFFAF5;
+}

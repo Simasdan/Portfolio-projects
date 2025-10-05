@@ -1,0 +1,85 @@
+@use '../../styles/mixins/responsive' as *;
+@use '../../styles/mixins/flexbox' as *;
+
+.reviewCardWrapper {
+    position: relative;
+    max-width: 47.8rem;
+    width: 100%;
+    gap: 3rem;
+    padding: 2.4rem 3.3rem 2.5rem 3rem;
+    background-color: #FDFDFD;
+    border-radius: 2.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem #FF75001A;
+    height: 15.9rem;
+
+    @include flexbox-centered;
+
+    @include for-phone-only {
+        margin: 2rem 0;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        text-align: center;
+        height: unset;
+    }
+
+    figure {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .reviewTextWrapper {
+        background-color: #FDFDFD;
+
+        @include for-phone-only {
+            background-color: #FFFFFF;
+        }
+
+        p {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            letter-spacing: 0rem;
+            color: #2F1509;
+            margin-bottom: 2rem;
+            background-color: #FDFDFD;
+
+            @include for-phone-only {
+                max-width: 23.9rem;
+                width: 100%;
+                font-family: Poppins;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                letter-spacing: 0rem;
+                text-align: center;
+            }
+        }
+
+        span {
+            font-family: Poppins;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            letter-spacing: 0rem;
+            color: #2F1509;
+            background-color: #FDFDFD;
+
+            @include for-phone-only {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .upperClause {
+        position: absolute;
+        top: -0.7rem;
+        right: 2rem;
+    }
+
+    .lowerClause {
+        position: absolute;
+        bottom: -0.7rem;
+        left: 2rem;
+    }
+}

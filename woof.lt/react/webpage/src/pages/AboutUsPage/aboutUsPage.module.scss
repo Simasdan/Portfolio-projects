@@ -1,0 +1,357 @@
+@use '../../styles/mixins/responsive' as *;
+@use '../../styles/mixins/flexbox' as *;
+
+.aboutUsPageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 104rem;
+    padding: 6rem 0;
+    margin: 0 auto;
+
+    @include for-tabletL-only {
+        max-width: 104rem;
+        padding: 6.65rem 2rem;
+    }
+
+    @include for-tablet-only {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    @include for-phone-only {
+        padding: 4rem 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    .aboutUsPageTextWrapper {
+
+        h1 {
+            max-width: 45.4rem;
+            width: 100%;
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 4.2rem;
+            letter-spacing: 0rem;
+            color: #3F1E11;
+            margin-bottom: 3rem;
+
+            @include for-tablet-only {
+                max-width: 48.4rem;
+            }
+
+            @include for-phone-only {
+                max-width: 34.4rem;
+                width: 100%;
+                font-family: Poppins;
+                font-weight: 700;
+                font-size: 3.2rem;
+                line-height: 4rem;
+                letter-spacing: 0rem;
+                margin-bottom: 3.5rem;
+            }
+
+            span {
+                color: #FF7500;
+
+                @include for-phone-only {
+                    font-family: Poppins;
+                    font-weight: 700;
+                    font-size: 3.2rem;
+                    line-height: 4rem;
+                    letter-spacing: 0rem;
+                }
+            }
+        }
+
+        h2 {
+            max-width: 31.7rem;
+            width: 100%;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            letter-spacing: 0rem;
+            color: #3F1E11;
+            margin-bottom: 3rem;
+
+            @include for-tablet-only {
+                max-width: 42.7rem;
+            }
+
+            @include for-phone-only {
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        p {
+            max-width: 31.7rem;
+            width: 100%;
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            letter-spacing: 0rem;
+            color: #3F1E11;
+
+            @include for-tablet-only {
+                max-width: 42.7rem;
+            }
+
+            span {
+                color: #FF7500;
+            }
+        }
+    }
+
+    .aboutUsPageImageWrapper {
+        max-width: 50rem;
+        width: 100%;
+        max-height: 43.4rem;
+        height: 100%;
+
+        @include for-tabletM-only {
+            max-width: 45rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.aboutUsCardsWrapper {
+    max-width: 144rem;
+    width: 100%;
+    display: flex;
+    padding: 6rem 20rem 9rem;
+    justify-content: center;
+    overflow: hidden;
+    gap: 3rem;
+
+    @include for-tabletL-only {
+        max-width: 104rem;
+        padding: 6rem 2rem;
+    }
+
+    @include for-tabletM-only {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include for-phone-only {
+        display: none;
+    }
+}
+
+.aboutUsMediaCard {
+    flex: 0 0 100%;
+    max-width: 50.5rem;
+    width: 100%;
+    height: 22rem;
+    border-radius: 2.5rem;
+    padding: 3.2rem 5.8rem;
+    background-image: url('../../assets/images/ContactsAdBG.png');
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include for-tabletL-only {
+        flex: unset;
+    }
+
+    @include for-phone-only {
+        padding-left: 3rem;
+    }
+
+    .cardTextAndButtonWrapper {
+        background: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        max-width: 32.4rem;
+        width: 100%;
+
+        h3 {
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0rem;
+            color: #3F1E11;
+            background: transparent;
+            margin-bottom: 1.3rem;
+        }
+
+        p {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            letter-spacing: -0.01rem;
+            color: #3F1E11;
+            background: transparent;
+            max-width: 32.4rem;
+            width: 100%;
+            margin-bottom: 1.3rem;
+
+            span {
+                font-family: Poppins;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                letter-spacing: -0.01rem;
+                color: #FF7500;
+                background: transparent;
+            }
+        }
+    }
+
+    .reachOutButton {
+        background: transparent;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        letter-spacing: -0.01rem;
+        border: none;
+        color: #FF7500;
+        cursor: pointer;
+    }
+}
+
+.aboutUsAdCard {
+    flex: 0 0 100%;
+    max-width: 50.5rem;
+    width: 100%;
+    height: 22rem;
+    border-radius: 2.5rem;
+    padding: 3.2rem 5.8rem;
+    background-image: url('../../assets/images/ContactsAdBG.png');
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include for-phoneL-only {
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    @include for-phone-only {
+        padding: 3.2rem 1.4rem 3.2rem 5.8rem;
+    }
+
+    .cardTextAndButtonWrapper {
+        background: transparent;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        max-width: 32.4rem;
+        width: 100%;
+
+        h3 {
+            font-family: Poppins;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0rem;
+            color: #3F1E11;
+            background: transparent;
+            margin-bottom: 1.3rem;
+        }
+
+        p {
+            font-family: Poppins;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            letter-spacing: -0.01rem;
+            color: #3F1E11;
+            background: transparent;
+            max-width: 32.4rem;
+            width: 100%;
+            margin-bottom: 1.3rem;
+
+            @include for-phone-only {
+                max-width: 24.1rem;
+                width: 100%;
+            }
+
+            span {
+                font-family: Poppins;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                letter-spacing: -0.01rem;
+                color: #FF7500;
+                background: transparent;
+            }
+        }
+    }
+
+    .reachOutButton {
+        background: transparent;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        letter-spacing: -0.01rem;
+        border: none;
+        color: #FF7500;
+        cursor: pointer;
+    }
+}
+
+.aboutUsPageCarousel {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    @include for-phone-only {
+        display: block;
+        padding: 2rem;
+    }
+}
+
+.customLeftArrow {
+    @include flexbox-centered;
+
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    max-width: 4.6rem;
+    width: 100%;
+    max-height: 4.6rem;
+    height: 100%;
+    border-radius: 2.5rem;
+    background-color: white;
+}
+
+.customRightArrow {
+    @include flexbox-centered;
+
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    max-width: 4.6rem;
+    width: 100%;
+    max-height: 4.6rem;
+    height: 100%;
+    border-radius: 2.5rem;
+    background-color: white;
+}
